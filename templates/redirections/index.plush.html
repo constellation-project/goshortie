@@ -1,0 +1,41 @@
+<div class="page-header">
+  <h1>Redirections</h1>
+</div>
+<ul class="list-unstyled list-inline">
+  <li>
+    <%= linkTo(newRedirectionsPath(), {class: "btn btn-primary"}) { %>
+      Create New Redirection
+    <% } %>
+  </li>
+</ul>
+
+<table class="table table-striped">
+  <thead>
+  <th>Email</th>
+    <th>IsVerified</th>
+    <th>Subdomain</th>
+    <th>Destination</th>
+    <th>&nbsp;</th>
+  </thead>
+  <tbody>
+    <%= for (redirection) in redirections { %>
+      <tr>
+      <td><%= redirection.Email %></td>
+        <td><%= redirection.IsVerified %></td>
+        <td><%= redirection.Subdomain %></td>
+        <td><%= redirection.Destination %></td>
+        <td>
+          <div class="pull-right">
+            <%= linkTo(redirectionPath({ redirection_id: redirection.ID }), {class: "btn btn-info", body: "View"}) %>
+            <%= linkTo(editRedirectionPath({ redirection_id: redirection.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+            <%= linkTo(redirectionPath({ redirection_id: redirection.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+          </div>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= paginator(pagination) %>
+</div>

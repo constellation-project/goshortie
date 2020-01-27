@@ -16,11 +16,14 @@ require (
 	github.com/gobuffalo/mw-paramlogger v0.0.0-20190129202837-395da1998525
 	github.com/gobuffalo/packr/v2 v2.7.1
 	github.com/gobuffalo/pop v4.13.1+incompatible
-	github.com/gobuffalo/validate v2.0.4+incompatible // indirect
+	github.com/gobuffalo/suite v2.8.2+incompatible
+	github.com/gobuffalo/validate v2.0.4+incompatible
+	github.com/gofrs/uuid v3.2.0+incompatible
 	github.com/jackc/pgconn v1.3.0 // indirect
 	github.com/lib/pq v1.3.0 // indirect
 	github.com/mattn/go-sqlite3 v2.0.2+incompatible // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/stretchr/testify v1.4.0
 	github.com/unrolled/secure v0.0.0-20190103195806-76e6d4e9b90c
 	gopkg.in/yaml.v2 v2.2.8 // indirect
 )

@@ -1,0 +1,8 @@
+create_table("redirections") {
+	t.Column("id", "uuid", {primary: true})
+	t.Column("email", "string", {})
+	t.Column("is_verified", "bool", {})
+	t.Column("subdomain", "string", {})
+	t.Column("destination", "string", {})
+	t.Timestamps()
+}

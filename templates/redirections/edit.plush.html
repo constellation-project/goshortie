@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>Edit Redirection</h1>
+</div>
+
+<%= formFor(redirection, {action: redirectionPath({ redirection_id: redirection.ID }), method: "PUT"}) { %>
+  <%= partial("redirections/form.html") %>
+  <%= linkTo(redirectionPath({ redirection_id: redirection.ID }), {class: "btn btn-warning", "data-confirm": "Are you sure?", body: "Cancel"}) %>
+<% } %>

@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>Redirection#Show</h1>
+</div>
+
+<ul class="list-unstyled list-inline">
+  <li class="list-inline-item">
+    <%= linkTo(redirectionsPath(), {class: "btn btn-info"}) { %>
+      Back to all Redirections
+    <% } %>
+  </li>
+  <li class="list-inline-item">
+    <%= linkTo(editRedirectionPath({ redirection_id: redirection.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+  </li>
+  <li class="list-inline-item">
+    <%= linkTo(redirectionPath({ redirection_id: redirection.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+  </li>
+</ul>
+
+<p>
+  <strong>Email</strong>: <%= redirection.Email %>
+</p>
+<p>
+  <strong>IsVerified</strong>: <%= redirection.IsVerified %>
+</p>
+<p>
+  <strong>Subdomain</strong>: <%= redirection.Subdomain %>
+</p>
+<p>
+  <strong>Destination</strong>: <%= redirection.Destination %>
+</p>

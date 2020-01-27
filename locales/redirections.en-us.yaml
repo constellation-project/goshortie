@@ -1,0 +1,6 @@
+- id: "redirection.created.success"
+  translation: "Redirection was successfully created."
+- id: "redirection.updated.success"
+  translation: "Redirection was successfully updated."
+- id: "redirection.destroyed.success"
+  translation: "Redirection was successfully destroyed."

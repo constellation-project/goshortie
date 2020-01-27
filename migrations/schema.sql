@@ -40,6 +40,10 @@ SET default_with_oids = false;
 
 CREATE TABLE public.redirections (
     id uuid NOT NULL,
+    email character varying(255) NOT NULL,
+    is_verified boolean NOT NULL,
+    subdomain character varying(255) NOT NULL,
+    destination character varying(255) NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
