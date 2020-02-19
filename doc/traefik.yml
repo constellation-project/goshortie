@@ -1,0 +1,23 @@
+providers:
+  redis:
+    endpoints:
+      - "redis:6379"
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+
+certificatesResolvers:
+  myresolver:
+    acme:
+      email: your-email@your-domain.org
+      storage: acme.json
+      tlsChallenge: {}
+
+      # comment the following line to generate a real cert
+      caServer: https://acme-staging-v02.api.letsencrypt.org/directory
+
+metrics:
+  prometheus: {}
